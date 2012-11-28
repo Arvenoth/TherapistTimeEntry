@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class CARDAuthenticationItem;
+
 @interface CARDFeedStore : NSObject
+
++ (CARDFeedStore *)sharedStore;
+
+- (void)fetchAuthenticationCredentials:(NSString *)username withPassword:(NSString *)password andCompletion:(void(^)(CARDAuthenticationItem *obj, NSError *err))block;
 
 @end
