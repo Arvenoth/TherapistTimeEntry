@@ -10,9 +10,14 @@
 
 @interface CARDLoginViewController ()
 
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *password;
+
 @end
 
 @implementation CARDLoginViewController
+
+@synthesize username, password;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,16 +28,19 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (IBAction)signinPressed
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    username = [[self usernameTextField] text];
+    password = [[self passwordTextField] text];
+    
+    [[self usernameTextField] setText:@""];
+    [[self passwordTextField] setText:@""];
+    
+    NSLog(@"Signing in with username: %@ and password: %@", username, password);
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)forgotPasswordPressed
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Password forgotten...");
 }
-
 @end
