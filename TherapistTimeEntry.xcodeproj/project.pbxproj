@@ -23,6 +23,8 @@
 		2F4E355A1666051F0033DD93 /* CARD_Full_Vert.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */; };
 		2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35561666051F0033DD93 /* CARD_globe.png */; };
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
+		2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB797071666724000C52CBF /* CARDFeedStore.m */; };
+		2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,11 @@
 		2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_Full_Vert.png; sourceTree = "<group>"; };
 		2F4E35561666051F0033DD93 /* CARD_globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_globe.png; sourceTree = "<group>"; };
 		2F4E35571666051F0033DD93 /* CARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD.png; sourceTree = "<group>"; };
+		2FB797051666719D00C52CBF /* JSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSerializable.h; sourceTree = "<group>"; };
+		2FB797061666724000C52CBF /* CARDFeedStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDFeedStore.h; sourceTree = "<group>"; };
+		2FB797071666724000C52CBF /* CARDFeedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDFeedStore.m; sourceTree = "<group>"; };
+		2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDAuthenticationItem.h; sourceTree = "<group>"; };
+		2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDAuthenticationItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,7 @@
 				2F4E3542166602430033DD93 /* Controllers */,
 				2F4E353F166601F50033DD93 /* Images */,
 				2F4E3540166601FD0033DD93 /* Models */,
+				2FB797031666715E00C52CBF /* Protocols */,
 				2F4E353E166601E60033DD93 /* Storyboards */,
 				2F4E3527166601CE0033DD93 /* TherapistTimeEntry */,
 				2F4E3541166602040033DD93 /* View Controllers */,
@@ -143,6 +151,8 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */,
+				2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -159,6 +169,8 @@
 		2F4E3542166602430033DD93 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2FB797061666724000C52CBF /* CARDFeedStore.h */,
+				2FB797071666724000C52CBF /* CARDFeedStore.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +180,14 @@
 			children = (
 			);
 			name = Actors;
+			sourceTree = "<group>";
+		};
+		2FB797031666715E00C52CBF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2FB797051666719D00C52CBF /* JSONSerializable.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +265,8 @@
 				2F4E352E166601CE0033DD93 /* main.m in Sources */,
 				2F4E3532166601CE0033DD93 /* CARDAppDelegate.m in Sources */,
 				2F4E3548166602B50033DD93 /* CARDLoginViewController.m in Sources */,
+				2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */,
+				2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +377,7 @@
 				2F4E353D166601CE0033DD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
