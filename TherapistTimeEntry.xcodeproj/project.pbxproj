@@ -18,6 +18,11 @@
 		2F4E3538166601CE0033DD93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3537166601CE0033DD93 /* Default-568h@2x.png */; };
 		2F4E3545166602800033DD93 /* CARDiPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3544166602800033DD93 /* CARDiPadStoryboard.storyboard */; };
 		2F4E3548166602B50033DD93 /* CARDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E3547166602B50033DD93 /* CARDLoginViewController.m */; };
+		2F4E35581666051F0033DD93 /* CARD_abrev_Horz.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35531666051F0033DD93 /* CARD_abrev_Horz.png */; };
+		2F4E35591666051F0033DD93 /* CARD_Full_Horz.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35541666051F0033DD93 /* CARD_Full_Horz.png */; };
+		2F4E355A1666051F0033DD93 /* CARD_Full_Vert.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */; };
+		2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35561666051F0033DD93 /* CARD_globe.png */; };
+		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		2F4E3544166602800033DD93 /* CARDiPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CARDiPadStoryboard.storyboard; sourceTree = "<group>"; };
 		2F4E3546166602B50033DD93 /* CARDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDLoginViewController.h; sourceTree = "<group>"; };
 		2F4E3547166602B50033DD93 /* CARDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDLoginViewController.m; sourceTree = "<group>"; };
+		2F4E35531666051F0033DD93 /* CARD_abrev_Horz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_abrev_Horz.png; sourceTree = "<group>"; };
+		2F4E35541666051F0033DD93 /* CARD_Full_Horz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_Full_Horz.png; sourceTree = "<group>"; };
+		2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_Full_Vert.png; sourceTree = "<group>"; };
+		2F4E35561666051F0033DD93 /* CARD_globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_globe.png; sourceTree = "<group>"; };
+		2F4E35571666051F0033DD93 /* CARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,11 @@
 		2F4E353F166601F50033DD93 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F4E35531666051F0033DD93 /* CARD_abrev_Horz.png */,
+				2F4E35541666051F0033DD93 /* CARD_Full_Horz.png */,
+				2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */,
+				2F4E35561666051F0033DD93 /* CARD_globe.png */,
+				2F4E35571666051F0033DD93 /* CARD.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -212,6 +227,11 @@
 				2F4E3536166601CE0033DD93 /* Default@2x.png in Resources */,
 				2F4E3538166601CE0033DD93 /* Default-568h@2x.png in Resources */,
 				2F4E3545166602800033DD93 /* CARDiPadStoryboard.storyboard in Resources */,
+				2F4E35581666051F0033DD93 /* CARD_abrev_Horz.png in Resources */,
+				2F4E35591666051F0033DD93 /* CARD_Full_Horz.png in Resources */,
+				2F4E355A1666051F0033DD93 /* CARD_Full_Vert.png in Resources */,
+				2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */,
+				2F4E355C1666051F0033DD93 /* CARD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
