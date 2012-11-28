@@ -7,17 +7,20 @@
 //
 
 #import "CARDLoginViewController.h"
+#import "CARDAuthenticationItem.h"
+#import "CARDFeedStore.h"
 
 @interface CARDLoginViewController ()
 
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) CARDAuthenticationItem *authenticationResponse;
 
 @end
 
 @implementation CARDLoginViewController
 
-@synthesize username, password;
+@synthesize username, password, authenticationResponse;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,10 +40,60 @@
     [[self passwordTextField] setText:@""];
     
     NSLog(@"Signing in with username: %@ and password: %@", username, password);
+    
+    [self fetchAuthenticationResponse];
 }
 
 - (IBAction)forgotPasswordPressed
 {
     NSLog(@"Password forgotten...");
 }
+
+- (void)fetchAuthenticationResponse
+{
+    //
+    // TODO :: Insert an activity indicator
+    //
+    
+    void (^completionBlock)(CARDAuthenticationItem *obj, NSError *err) = ^(CARDAuthenticationItem *obj, NSError *err)
+    {
+        if (!err)
+        {
+            // If the response was successfully fetched, grab the
+            // authenticationResponse
+            authenticationResponse = obj;
+            
+            if ([[self authenticationResponse] status])
+            {
+                UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Success"
+                                                                       message:[[self authenticationResponse] token]
+                                                                      delegate:nil
+                                                             cancelButtonTitle:@"OK"
+                                                             otherButtonTitles:nil, nil];
+                
+                [successAlert show];
+            }
+        }
+        else
+        {
+            // Things have obviously gone wrong...
+            NSString *errorMessage = [NSString stringWithFormat:@"Fetch Failed: %@", [err localizedDescription]];
+            
+            // Create and show an alert view
+            UIAlertView *failureAlert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                   message:errorMessage
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles:nil, nil];
+            
+            [failureAlert show];
+        }
+    };
+    
+    // Initiate the request
+    [[CARDFeedStore sharedStore] fetchAuthenticationCredentials:[self username]
+                                                   withPassword:[self password]
+                                                  andCompletion:completionBlock];
+}
+
 @end

@@ -15,4 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *rememberLastUser;
 
+- (void)fetchAuthenticationResponse;
+
 @end

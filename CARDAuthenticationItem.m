@@ -14,7 +14,9 @@
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    
+    [self setMessage:[d objectForKey:@"message"]];
+    [self setStatus:[d objectForKey:@"status"]];
+    [self setToken:[d objectForKey:@"token"]];
 }
 
 @end

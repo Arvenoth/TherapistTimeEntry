@@ -8,21 +8,15 @@
 
 #import "CARDFeedStore.h"
 #import "CARDAuthenticationItem.h"
+#import "CARDConnection.h"
+
+static NSString *mainSite = @"http://phonest.centerforautism.com/";
 
 @interface CARDFeedStore()
-
-@property (nonatomic, readonly) NSString *mainSite;
 
 @end
 
 @implementation CARDFeedStore
-
-@synthesize mainSite;
-
-- (NSString *)mainSite
-{
-    return @"http://phonest.centerforautism.com/";
-}
 
 + (CARDFeedStore *)sharedStore
 {
@@ -42,11 +36,22 @@
     NSString *authenticationPortal = [NSString stringWithFormat:@"authenticate?username=%@&password=%@", username, password];
     NSString *requestString = [NSString stringWithFormat:@"%@%@", mainSite, authenticationPortal];
     
+    NSLog(@"%@", requestString);
+    
     // Prepare the URL
     NSURL *authenticationURL = [NSURL URLWithString:requestString];
     
+    NSLog(@"%@", authenticationURL);
+    
     // Prepare the connection
     NSURLRequest *authenticationRequest = [NSURLRequest requestWithURL:authenticationURL];
+    CARDAuthenticationItem *authenticationResponse = [[CARDAuthenticationItem alloc] init];
+    
+    CARDConnection *connection = [[CARDConnection alloc] initWithRequest:authenticationRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:authenticationResponse];
+    
+    [connection start];
 }
 
 @end
