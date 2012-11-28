@@ -51,6 +51,12 @@
 		2F4E3512166601CD0033DD93 = {
 			isa = PBXGroup;
 			children = (
+				2F4E35431666024B0033DD93 /* Actors */,
+				2F4E3542166602430033DD93 /* Controllers */,
+				2F4E3541166602040033DD93 /* View Controllers */,
+				2F4E3540166601FD0033DD93 /* Models */,
+				2F4E353F166601F50033DD93 /* Images */,
+				2F4E353E166601E60033DD93 /* Storyboards */,
 				2F4E3527166601CE0033DD93 /* TherapistTimeEntry */,
 				2F4E3520166601CE0033DD93 /* Frameworks */,
 				2F4E351E166601CE0033DD93 /* Products */,
@@ -97,6 +103,48 @@
 				2F4E3537166601CE0033DD93 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F4E353E166601E60033DD93 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2F4E353F166601F50033DD93 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		2F4E3540166601FD0033DD93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2F4E3541166602040033DD93 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2F4E3542166602430033DD93 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2F4E35431666024B0033DD93 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Actors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
