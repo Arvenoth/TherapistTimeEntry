@@ -25,6 +25,7 @@
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 		2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB797071666724000C52CBF /* CARDFeedStore.m */; };
 		2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */; };
+		2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB79749166684F600C52CBF /* CARDConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		2FB797071666724000C52CBF /* CARDFeedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDFeedStore.m; sourceTree = "<group>"; };
 		2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDAuthenticationItem.h; sourceTree = "<group>"; };
 		2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDAuthenticationItem.m; sourceTree = "<group>"; };
+		2FB79748166684F600C52CBF /* CARDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDConnection.h; sourceTree = "<group>"; };
+		2FB79749166684F600C52CBF /* CARDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 		2F4E35431666024B0033DD93 /* Actors */ = {
 			isa = PBXGroup;
 			children = (
+				2FB79748166684F600C52CBF /* CARDConnection.h */,
+				2FB79749166684F600C52CBF /* CARDConnection.m */,
 			);
 			name = Actors;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				2F4E3548166602B50033DD93 /* CARDLoginViewController.m in Sources */,
 				2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */,
 				2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */,
+				2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
