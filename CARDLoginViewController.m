@@ -39,8 +39,6 @@
     [[self usernameTextField] setText:@""];
     [[self passwordTextField] setText:@""];
     
-    NSLog(@"Signing in with username: %@ and password: %@", username, password);
-    
     [self fetchAuthenticationResponse];
 }
 
@@ -63,7 +61,13 @@
             // authenticationResponse
             authenticationResponse = obj;
             
-            if ([[self authenticationResponse] status])
+            // Wrap the status number to challenge against
+            // to be able to make the comparison
+            NSNumber *numZero = [NSNumber numberWithInt:0];
+
+            NSLog(@"message = %@\nstatus = %@\n token = %@", [[self authenticationResponse] message], [[self authenticationResponse] status], [[self authenticationResponse] token]);
+            
+            if ([[self authenticationResponse] status] == numZero)
             {
                 UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Success"
                                                                        message:[[self authenticationResponse] token]
@@ -72,6 +76,16 @@
                                                              otherButtonTitles:nil, nil];
                 
                 [successAlert show];
+            }
+            else
+            {
+                UIAlertView *loginFailure = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                                       message:@"Incorrect username or password"
+                                                                      delegate:nil
+                                                             cancelButtonTitle:@"OK"
+                                                             otherButtonTitles:nil, nil];
+                                             
+                [loginFailure show];
             }
         }
         else

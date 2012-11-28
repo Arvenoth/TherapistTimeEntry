@@ -36,12 +36,8 @@ static NSString *mainSite = @"http://phonest.centerforautism.com/";
     NSString *authenticationPortal = [NSString stringWithFormat:@"authenticate?username=%@&password=%@", username, password];
     NSString *requestString = [NSString stringWithFormat:@"%@%@", mainSite, authenticationPortal];
     
-    NSLog(@"%@", requestString);
-    
     // Prepare the URL
     NSURL *authenticationURL = [NSURL URLWithString:requestString];
-    
-    NSLog(@"%@", authenticationURL);
     
     // Prepare the connection
     NSURLRequest *authenticationRequest = [NSURLRequest requestWithURL:authenticationURL];
