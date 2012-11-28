@@ -16,6 +16,8 @@
 		2F4E3534166601CE0033DD93 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3533166601CE0033DD93 /* Default.png */; };
 		2F4E3536166601CE0033DD93 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3535166601CE0033DD93 /* Default@2x.png */; };
 		2F4E3538166601CE0033DD93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3537166601CE0033DD93 /* Default-568h@2x.png */; };
+		2F4E3545166602800033DD93 /* CARDiPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E3544166602800033DD93 /* CARDiPadStoryboard.storyboard */; };
+		2F4E3548166602B50033DD93 /* CARDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E3547166602B50033DD93 /* CARDLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		2F4E3533166601CE0033DD93 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2F4E3535166601CE0033DD93 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2F4E3537166601CE0033DD93 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2F4E3544166602800033DD93 /* CARDiPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CARDiPadStoryboard.storyboard; sourceTree = "<group>"; };
+		2F4E3546166602B50033DD93 /* CARDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDLoginViewController.h; sourceTree = "<group>"; };
+		2F4E3547166602B50033DD93 /* CARDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +58,11 @@
 			children = (
 				2F4E35431666024B0033DD93 /* Actors */,
 				2F4E3542166602430033DD93 /* Controllers */,
-				2F4E3541166602040033DD93 /* View Controllers */,
-				2F4E3540166601FD0033DD93 /* Models */,
 				2F4E353F166601F50033DD93 /* Images */,
+				2F4E3540166601FD0033DD93 /* Models */,
 				2F4E353E166601E60033DD93 /* Storyboards */,
 				2F4E3527166601CE0033DD93 /* TherapistTimeEntry */,
+				2F4E3541166602040033DD93 /* View Controllers */,
 				2F4E3520166601CE0033DD93 /* Frameworks */,
 				2F4E351E166601CE0033DD93 /* Products */,
 			);
@@ -108,6 +113,7 @@
 		2F4E353E166601E60033DD93 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				2F4E3544166602800033DD93 /* CARDiPadStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -129,6 +135,8 @@
 		2F4E3541166602040033DD93 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F4E3546166602B50033DD93 /* CARDLoginViewController.h */,
+				2F4E3547166602B50033DD93 /* CARDLoginViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				2F4E3534166601CE0033DD93 /* Default.png in Resources */,
 				2F4E3536166601CE0033DD93 /* Default@2x.png in Resources */,
 				2F4E3538166601CE0033DD93 /* Default-568h@2x.png in Resources */,
+				2F4E3545166602800033DD93 /* CARDiPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +224,7 @@
 			files = (
 				2F4E352E166601CE0033DD93 /* main.m in Sources */,
 				2F4E3532166601CE0033DD93 /* CARDAppDelegate.m in Sources */,
+				2F4E3548166602B50033DD93 /* CARDLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
