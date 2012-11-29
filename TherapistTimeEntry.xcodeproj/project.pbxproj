@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F26FD601667CFED0026B8AA /* CARDDayEventItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F26FD5F1667CFED0026B8AA /* CARDDayEventItem.m */; };
 		2F4E3522166601CE0033DD93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4E3521166601CE0033DD93 /* UIKit.framework */; };
 		2F4E3524166601CE0033DD93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4E3523166601CE0033DD93 /* Foundation.framework */; };
 		2F4E3526166601CE0033DD93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4E3525166601CE0033DD93 /* CoreGraphics.framework */; };
@@ -26,9 +27,13 @@
 		2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB797071666724000C52CBF /* CARDFeedStore.m */; };
 		2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */; };
 		2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB79749166684F600C52CBF /* CARDConnection.m */; };
+		2FB7974C1666BF7B00C52CBF /* CARD_w_Letters.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB7974B1666BF7B00C52CBF /* CARD_w_Letters.png */; };
+		2FB797511666C8B000C52CBF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB797501666C8B000C52CBF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F26FD5E1667CFED0026B8AA /* CARDDayEventItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDDayEventItem.h; sourceTree = "<group>"; };
+		2F26FD5F1667CFED0026B8AA /* CARDDayEventItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDDayEventItem.m; sourceTree = "<group>"; };
 		2F4E351D166601CE0033DD93 /* TherapistTimeEntry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TherapistTimeEntry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4E3521166601CE0033DD93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2F4E3523166601CE0033DD93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +62,8 @@
 		2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDAuthenticationItem.m; sourceTree = "<group>"; };
 		2FB79748166684F600C52CBF /* CARDConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDConnection.h; sourceTree = "<group>"; };
 		2FB79749166684F600C52CBF /* CARDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDConnection.m; sourceTree = "<group>"; };
+		2FB7974B1666BF7B00C52CBF /* CARD_w_Letters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_w_Letters.png; sourceTree = "<group>"; };
+		2FB797501666C8B000C52CBF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB797511666C8B000C52CBF /* CoreLocation.framework in Frameworks */,
 				2F4E3522166601CE0033DD93 /* UIKit.framework in Frameworks */,
 				2F4E3524166601CE0033DD93 /* Foundation.framework in Frameworks */,
 				2F4E3526166601CE0033DD93 /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +84,7 @@
 		2F4E3512166601CD0033DD93 = {
 			isa = PBXGroup;
 			children = (
+				2FB797501666C8B000C52CBF /* CoreLocation.framework */,
 				2F4E35431666024B0033DD93 /* Actors */,
 				2F4E3542166602430033DD93 /* Controllers */,
 				2F4E353F166601F50033DD93 /* Images */,
@@ -142,6 +151,7 @@
 		2F4E353F166601F50033DD93 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2FB7974B1666BF7B00C52CBF /* CARD_w_Letters.png */,
 				2F4E35531666051F0033DD93 /* CARD_abrev_Horz.png */,
 				2F4E35541666051F0033DD93 /* CARD_Full_Horz.png */,
 				2F4E35551666051F0033DD93 /* CARD_Full_Vert.png */,
@@ -156,6 +166,8 @@
 			children = (
 				2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */,
 				2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */,
+				2F26FD5E1667CFED0026B8AA /* CARDDayEventItem.h */,
+				2F26FD5F1667CFED0026B8AA /* CARDDayEventItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 				2F4E355A1666051F0033DD93 /* CARD_Full_Vert.png in Resources */,
 				2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */,
 				2F4E355C1666051F0033DD93 /* CARD.png in Resources */,
+				2FB7974C1666BF7B00C52CBF /* CARD_w_Letters.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +286,7 @@
 				2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */,
 				2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */,
 				2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */,
+				2F26FD601667CFED0026B8AA /* CARDDayEventItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

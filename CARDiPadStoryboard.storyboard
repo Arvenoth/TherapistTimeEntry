@@ -67,25 +67,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CARD_w_Letters.png" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-H4-SS3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="5SQ-cK-cXs"/>
+                                    <constraint firstAttribute="width" constant="505" id="YZ0-au-uuc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yFR-GH-PuD" secondAttribute="bottom" constant="424" id="110-KI-Zhv"/>
                             <constraint firstItem="kWC-4C-HBv" firstAttribute="trailing" secondItem="ZF9-XP-AMP" secondAttribute="trailing" type="default" id="1jE-M3-eum"/>
+                            <constraint firstAttribute="bottom" secondItem="Xio-J6-FFL" secondAttribute="bottom" constant="311" id="50c-PD-auU"/>
                             <constraint firstItem="LPN-d2-UfV" firstAttribute="centerY" secondItem="CuX-z6-Mf0" secondAttribute="centerY" type="default" id="88c-mB-MOu"/>
-                            <constraint firstAttribute="bottom" secondItem="Xio-J6-FFL" secondAttribute="bottom" constant="251" id="CNa-7z-XmL"/>
                             <constraint firstItem="yFR-GH-PuD" firstAttribute="trailing" secondItem="ZF9-XP-AMP" secondAttribute="trailing" type="default" id="DFg-YY-fNf"/>
-                            <constraint firstItem="ZF9-XP-AMP" firstAttribute="centerX" secondItem="hEH-F6-ujU" secondAttribute="centerX" type="default" id="Hp1-IR-aAD"/>
+                            <constraint firstItem="ZF9-XP-AMP" firstAttribute="centerX" secondItem="hEH-F6-ujU" secondAttribute="centerX" type="default" id="DsT-eG-5YI"/>
+                            <constraint firstItem="kWC-4C-HBv" firstAttribute="top" secondItem="hEH-F6-ujU" secondAttribute="top" constant="36" id="LTR-PO-oOv"/>
+                            <constraint firstAttribute="bottom" secondItem="ocj-H4-SS3" secondAttribute="bottom" constant="52" id="QsO-Hs-HMT"/>
                             <constraint firstItem="kWC-4C-HBv" firstAttribute="leading" secondItem="ZF9-XP-AMP" secondAttribute="leading" type="default" id="SUK-4r-IyF"/>
                             <constraint firstItem="Xio-J6-FFL" firstAttribute="leading" secondItem="yFR-GH-PuD" secondAttribute="leading" type="default" id="UGe-2O-l43"/>
-                            <constraint firstAttribute="bottom" secondItem="CuX-z6-Mf0" secondAttribute="bottom" constant="316" id="WzB-w4-OAt"/>
-                            <constraint firstAttribute="bottom" secondItem="ZF9-XP-AMP" secondAttribute="bottom" constant="431" id="XYG-ca-jic"/>
-                            <constraint firstAttribute="bottom" secondItem="yFR-GH-PuD" secondAttribute="bottom" constant="364" id="ave-S5-812"/>
                             <constraint firstItem="ZF9-XP-AMP" firstAttribute="leading" secondItem="yFR-GH-PuD" secondAttribute="leading" type="default" id="eYP-Pt-vW3"/>
                             <constraint firstItem="yFR-GH-PuD" firstAttribute="trailing" secondItem="Run-IW-aZf" secondAttribute="trailing" type="default" id="gG7-fY-ACx"/>
-                            <constraint firstItem="kWC-4C-HBv" firstAttribute="top" secondItem="hEH-F6-ujU" secondAttribute="top" constant="104" id="lZL-RF-M9J"/>
+                            <constraint firstAttribute="bottom" secondItem="CuX-z6-Mf0" secondAttribute="bottom" constant="376" id="hit-lJ-6wf"/>
+                            <constraint firstItem="ZF9-XP-AMP" firstAttribute="top" secondItem="hEH-F6-ujU" secondAttribute="top" constant="483" id="ied-Q2-fF9"/>
                             <constraint firstItem="CuX-z6-Mf0" firstAttribute="leading" secondItem="hEH-F6-ujU" secondAttribute="leading" constant="267" id="llW-UU-Ptg"/>
                             <constraint firstItem="Xio-J6-FFL" firstAttribute="baseline" secondItem="Run-IW-aZf" secondAttribute="baseline" type="default" id="ndH-LU-FzQ"/>
                             <constraint firstItem="LPN-d2-UfV" firstAttribute="leading" secondItem="hEH-F6-ujU" secondAttribute="leading" constant="363" id="oa9-G0-Mqv"/>
+                            <constraint firstItem="ocj-H4-SS3" firstAttribute="trailing" secondItem="Run-IW-aZf" secondAttribute="trailing" type="default" id="wMf-K2-zKk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -96,11 +104,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bx3-9j-VIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85" y="317"/>
+            <point key="canvasLocation" x="-3487" y="863"/>
         </scene>
     </scenes>
     <resources>
         <image name="CARD_globe.png" width="1097" height="1050"/>
+        <image name="CARD_w_Letters.png" width="1070" height="420"/>
     </resources>
     <classes>
         <class className="CARDLoginViewController" superclassName="UIViewController">
