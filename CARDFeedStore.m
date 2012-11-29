@@ -8,6 +8,7 @@
 
 #import "CARDFeedStore.h"
 #import "CARDAuthenticationItem.h"
+#import "CARDDayEventChannel.h"
 #import "CARDConnection.h"
 
 static NSString *mainSite = @"http://phonest.centerforautism.com/";
@@ -46,6 +47,26 @@ static NSString *mainSite = @"http://phonest.centerforautism.com/";
     CARDConnection *connection = [[CARDConnection alloc] initWithRequest:authenticationRequest];
     [connection setCompletionBlock:block];
     [connection setJsonRootObject:authenticationResponse];
+    
+    [connection start];
+}
+
+- (void)fetchCalendarDayEvents:(NSString *)token onDate:(NSString *)date andCompletion:(void (^)(CARDDayEventChannel *, NSError *))block
+{
+    // Prepare the URL to be sent off to the request
+    NSString *calendarDayPortal = [NSString stringWithFormat:@"calendar/day?token=%@&date=%@", token, date];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", mainSite, calendarDayPortal];
+    
+    // Prepare the URL
+    NSURL *calendarDayURL = [NSURL URLWithString:requestString];
+    
+    // Prepare the connection
+    NSURLRequest *calendaryDayRequest = [NSURLRequest requestWithURL:calendarDayURL];
+    CARDDayEventChannel *calendarDayResponse = [[CARDDayEventChannel alloc] init];
+    
+    CARDConnection *connection = [[CARDConnection alloc] initWithRequest:calendaryDayRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:calendarDayResponse];
     
     [connection start];
 }

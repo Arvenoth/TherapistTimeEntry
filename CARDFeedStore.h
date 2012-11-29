@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @class CARDAuthenticationItem;
+@class CARDDayEventChannel;
 
 @interface CARDFeedStore : NSObject
 
 + (CARDFeedStore *)sharedStore;
 
 - (void)fetchAuthenticationCredentials:(NSString *)username withPassword:(NSString *)password andCompletion:(void(^)(CARDAuthenticationItem *obj, NSError *err))block;
+
+- (void)fetchCalendarDayEvents:(NSString *)token onDate:(NSString *)date andCompletion:(void(^)(CARDDayEventChannel *obj, NSError *err))block;
 
 @end
