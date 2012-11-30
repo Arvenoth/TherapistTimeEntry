@@ -10,7 +10,7 @@
 
 @implementation CARDNotesItem
 
-@synthesize employeeName, identification, note, noteTitle;
+@synthesize employeeName, identification, note, noteTitle, timeStamp, status;
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
@@ -18,6 +18,8 @@
     [self setIdentification:[d objectForKey:@"identification"]];
     [self setNote:[d objectForKey:@"note"]];
     [self setNoteTitle:[d objectForKey:@"noteTitle"]];
+    [self setTimeStamp:[d objectForKey:@"timeStamp"]];
+    [self setStatus:[d objectForKey:@"status"]];
 }
 
 @end

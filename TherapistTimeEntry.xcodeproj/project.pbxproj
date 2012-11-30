@@ -182,7 +182,7 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2FA81A5416693C5900FA6EA3 /* CARDNotes */,
+				2FA81A5416693C5900FA6EA3 /* CARDNotesAll */,
 				2FD47B1116685D9400FE98CF /* CARDAuthentication */,
 				2FD47B1316685DAD00FE98CF /* CARDCalendarDay */,
 				2FADC5031669277000ED9CA2 /* CARDProfile */,
@@ -217,13 +217,13 @@
 			name = Actors;
 			sourceTree = "<group>";
 		};
-		2FA81A5416693C5900FA6EA3 /* CARDNotes */ = {
+		2FA81A5416693C5900FA6EA3 /* CARDNotesAll */ = {
 			isa = PBXGroup;
 			children = (
 				2FA81A55166945F600FA6EA3 /* CARDNotesItem.h */,
 				2FA81A56166945F600FA6EA3 /* CARDNotesItem.m */,
 			);
-			name = CARDNotes;
+			name = CARDNotesAll;
 			sourceTree = "<group>";
 		};
 		2FADC5031669277000ED9CA2 /* CARDProfile */ = {

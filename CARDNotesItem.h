@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONSerializable.h"
+#import "CARDAuthenticationItem.h"
 
 @interface CARDNotesItem : NSObject <JSONSerializable>
 
@@ -15,6 +16,9 @@
 @property (nonatomic, strong) NSNumber *identification;
 @property (nonatomic, strong) NSString *note;
 @property (nonatomic, strong) NSString *noteTitle;
+@property (nonatomic, strong) NSString *timeStamp;
+
+@property (nonatomic, strong) CARDAuthenticationItem *status;
 
 
 @end
