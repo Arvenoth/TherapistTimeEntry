@@ -10,6 +10,7 @@
 
 @class CARDAuthenticationItem;
 @class CARDDayEventChannel;
+@class CARDProfileItem;
 
 @interface CARDFeedStore : NSObject
 
@@ -18,5 +19,7 @@
 - (void)fetchAuthenticationCredentials:(NSString *)username withPassword:(NSString *)password andCompletion:(void(^)(CARDAuthenticationItem *obj, NSError *err))block;
 
 - (void)fetchCalendarDayEvents:(NSString *)token onDate:(NSString *)date andCompletion:(void(^)(CARDDayEventChannel *obj, NSError *err))block;
+
+- (void)fetchProfile:(NSString *)token andCompletion:(void(^)(CARDProfileItem *obj, NSError *err))block;
 
 @end

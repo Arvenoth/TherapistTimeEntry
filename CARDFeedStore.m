@@ -9,12 +9,13 @@
 #import "CARDFeedStore.h"
 #import "CARDAuthenticationItem.h"
 #import "CARDDayEventChannel.h"
+#import "CARDProfileItem.h"
 #import "CARDConnection.h"
 
-static NSString *mainSite = @"http://phonest.centerforautism.com/";
+#define MAIN_SITE @"http://phonest.centerforautism.com/"
 
 @interface CARDFeedStore()
-
+- (NSURLRequest *)createRequestFromPortal:(NSString *)portal andParameters:(NSArray *)parameters;
 @end
 
 @implementation CARDFeedStore
@@ -35,7 +36,7 @@ static NSString *mainSite = @"http://phonest.centerforautism.com/";
 {
     // Prepare the URL to be sent off to the request
     NSString *authenticationPortal = [NSString stringWithFormat:@"authenticate?username=%@&password=%@", username, password];
-    NSString *requestString = [NSString stringWithFormat:@"%@%@", mainSite, authenticationPortal];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, authenticationPortal];
     
     // Prepare the URL
     NSURL *authenticationURL = [NSURL URLWithString:requestString];
@@ -55,7 +56,7 @@ static NSString *mainSite = @"http://phonest.centerforautism.com/";
 {
     // Prepare the URL to be sent off to the request
     NSString *calendarDayPortal = [NSString stringWithFormat:@"calendar/day?token=%@&date=%@", token, date];
-    NSString *requestString = [NSString stringWithFormat:@"%@%@", mainSite, calendarDayPortal];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, calendarDayPortal];
     
     // Prepare the URL
     NSURL *calendarDayURL = [NSURL URLWithString:requestString];
@@ -69,6 +70,34 @@ static NSString *mainSite = @"http://phonest.centerforautism.com/";
     [connection setJsonRootObject:calendarDayResponse];
     
     [connection start];
+}
+
+- (void)fetchProfile:(NSString *)token andCompletion:(void (^)(CARDProfileItem *, NSError *))block
+{
+    NSString *profilePortal = [NSString stringWithFormat:@"profile?token=%@", token];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, profilePortal];
+    
+    NSURL *profileURL = [NSURL URLWithString:requestString];
+    
+    NSURLRequest *profileRequest = [NSURLRequest requestWithURL:profileURL];
+    CARDProfileItem *profileResponse = [[CARDProfileItem alloc] init];
+    
+    CARDConnection *connection = [[CARDConnection alloc] initWithRequest:profileRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:profileResponse];
+    
+    [connection start];
+}
+
+- (NSURLRequest *)createRequestFromPortal:(NSString *)portal andParameters:(NSArray *)parameters
+{
+    //
+    // This is a helper function which will recieve the portal which it will target and insert
+    // whatever required parameters are included
+    //
+    // NSString *requestedPortal = [NSString stringWithFormat:portal];
+    
+    return nil;
 }
 
 @end
