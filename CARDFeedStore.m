@@ -11,6 +11,8 @@
 #import "CARDDayEventChannel.h"
 #import "CARDProfileItem.h"
 #import "CARDPatientsItem.h"
+#import "CARDNotesObject.h"
+#import "CARDPatientJobObject.h"
 #import "CARDConnection.h"
 
 #define MAIN_SITE @"http://phonest.centerforautism.com/"
@@ -90,9 +92,9 @@
     [connection start];
 }
 
-- (void)fetchPatientsAll:(NSString *)token withPatientId:(NSNumber *)patientId sinceDate:(NSString *)date andCompletion:(void (^)(CARDPatientsItem *, NSError *))block
+- (void)fetchPatientsAll:(NSString *)token withPatientId:(NSNumber *)identification sinceDate:(NSString *)date andCompletion:(void (^)(CARDPatientsItem *, NSError *))block
 {
-    NSString *patientsAllPortal = [NSString stringWithFormat:@"patients/all?token=%@&id=%@&since=%@", token, patientId, date];
+    NSString *patientsAllPortal = [NSString stringWithFormat:@"patients/all?token=%@&id=%@&since=%@", token, identification, date];
     NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, patientsAllPortal];
     
     NSURL *patientsAllURL = [NSURL URLWithString:requestString];
@@ -103,6 +105,40 @@
     CARDConnection *connection = [[CARDConnection alloc] initWithRequest:patientsAllRequest];
     [connection setCompletionBlock:block];
     [connection setJsonRootObject:patientsAllResponse];
+    
+    [connection start];
+}
+
+- (void)fetchNotesAll:(NSString *)token forPatient:(NSNumber *)patientId sinceDate:(NSString *)date andCompletion:(void (^)(CARDNotesObject *, NSError *))block
+{
+    NSString *notesAllPortal = [NSString stringWithFormat:@"notes/all?token=%@&id=%@&since=%@", token, patientId, date];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, notesAllPortal];
+    
+    NSURL *notesAllURL = [NSURL URLWithString:requestString];
+    
+    NSURLRequest *notesAllRequest = [NSURLRequest requestWithURL:notesAllURL];
+    CARDNotesObject *notesAllResponse = [[CARDNotesObject alloc] init];
+    
+    CARDConnection *connection  = [[CARDConnection alloc] initWithRequest:notesAllRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:notesAllResponse];
+    
+    [connection start];
+}
+
+- (void)fetchWorkAuthorizationList:(NSString *)token andCompletion:(void (^)(CARDPatientJobObject *, NSError *))block
+{
+    NSString *workAuthorizationListPortal = [NSString stringWithFormat:@"workauthorization/list?token=%@", token];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, workAuthorizationListPortal];
+    
+    NSURL *workAuthorizationListURL = [NSURL URLWithString:requestString];
+    
+    NSURLRequest *workAuthorizationRequest = [NSURLRequest requestWithURL:workAuthorizationListURL];
+    CARDPatientJobObject *workAuthorizationResponse = [[CARDPatientJobObject alloc] init];
+    
+    CARDConnection *connection = [[CARDConnection alloc] initWithRequest:workAuthorizationRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:workAuthorizationResponse];
     
     [connection start];
 }
