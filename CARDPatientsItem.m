@@ -10,4 +10,21 @@
 
 @implementation CARDPatientsItem
 
+@synthesize birthDate, customerSiteId, guardianName, name, patientId, progressTrend,
+            scheduledTime, startTime, tmTimeCardId, address, status;
+
+- (void)readFromJSONDictionary:(NSDictionary *)d
+{
+    [self setBirthDate:[d objectForKey:@"birthDate"]];
+    [self setCustomerSiteId:[d objectForKey:@"customerSiteId"]];
+    [self setGuardianName:[d objectForKey:@"guardianName"]];
+    [self setName:[d objectForKey:@"name"]];
+    [self setPatientId:[d objectForKey:@"progressTrend"]];
+    [self setScheduledTime:[d objectForKey:@"scheduledTime"]];
+    [self setStartTime:[d objectForKey:@"startTime"]];
+    [self setTmTimeCardId:[d objectForKey:@"tmTimeCardId"]];
+    [self setAddress:[d objectForKey:@"address"]];
+    [self setStatus:[d objectForKey:@"status"]];
+}
+
 @end
