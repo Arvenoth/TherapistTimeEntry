@@ -11,6 +11,7 @@
 @class CARDAuthenticationItem;
 @class CARDDayEventChannel;
 @class CARDProfileItem;
+@class CARDPatientsItem;
 
 @interface CARDFeedStore : NSObject
 
@@ -21,5 +22,7 @@
 - (void)fetchCalendarDayEvents:(NSString *)token onDate:(NSString *)date andCompletion:(void(^)(CARDDayEventChannel *obj, NSError *err))block;
 
 - (void)fetchProfile:(NSString *)token andCompletion:(void(^)(CARDProfileItem *obj, NSError *err))block;
+
+- (void)fetchPatientsAll:(NSString *)token withPatientId:(NSNumber *)patientId sinceDate:(NSString *)date andCompletion:(void(^)(CARDPatientsItem *obj, NSError *err))block;
 
 @end

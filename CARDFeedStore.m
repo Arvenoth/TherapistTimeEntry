@@ -10,6 +10,7 @@
 #import "CARDAuthenticationItem.h"
 #import "CARDDayEventChannel.h"
 #import "CARDProfileItem.h"
+#import "CARDPatientsItem.h"
 #import "CARDConnection.h"
 
 #define MAIN_SITE @"http://phonest.centerforautism.com/"
@@ -89,6 +90,22 @@
     [connection start];
 }
 
+- (void)fetchPatientsAll:(NSString *)token withPatientId:(NSNumber *)patientId sinceDate:(NSString *)date andCompletion:(void (^)(CARDPatientsItem *, NSError *))block
+{
+    NSString *patientsAllPortal = [NSString stringWithFormat:@"patients/all?token=%@&id=%@&since=%@", token, patientId, date];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, patientsAllPortal];
+    
+    NSURL *patientsAllURL = [NSURL URLWithString:requestString];
+    
+    NSURLRequest *patientsAllRequest = [NSURLRequest requestWithURL:patientsAllURL];
+    CARDPatientsItem *patientsAllResponse = [[CARDPatientsItem alloc] init];
+    
+    CARDConnection *connection = [[CARDConnection alloc] initWithRequest:patientsAllRequest];
+    [connection setCompletionBlock:block];
+    [connection setJsonRootObject:patientsAllResponse];
+    
+    [connection start];
+}
 
 //
 // TODO :: Write the helper function to make the rest of the function calls smaller and easier
