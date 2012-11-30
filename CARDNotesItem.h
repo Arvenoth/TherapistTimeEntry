@@ -18,7 +18,4 @@
 @property (nonatomic, strong) NSString *noteTitle;
 @property (nonatomic, strong) NSString *timeStamp;
 
-@property (nonatomic, strong) CARDAuthenticationItem *status;
-
-
 @end
