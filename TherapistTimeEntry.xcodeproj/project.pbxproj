@@ -28,6 +28,8 @@
 		2FA0343816695F110086E995 /* CARDNotesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343716695F110086E995 /* CARDNotesObject.m */; };
 		2FA0343F166960150086E995 /* CARDPatientsAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343E166960150086E995 /* CARDPatientsAddress.m */; };
 		2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03441166960560086E995 /* CARDPatientsItem.m */; };
+		2FA03446166966EC0086E995 /* CARDPatientJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03445166966EC0086E995 /* CARDPatientJob.m */; };
+		2FA03449166967D40086E995 /* CARDPatientJobObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03448166967D40086E995 /* CARDPatientJobObject.m */; };
 		2FA81A4C1669325900FA6EA3 /* CARDBenefitsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */; };
 		2FA81A501669333C00FA6EA3 /* CARDOfficeAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A4F1669333C00FA6EA3 /* CARDOfficeAddress.m */; };
 		2FA81A531669345600FA6EA3 /* CARDWorkSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A521669345600FA6EA3 /* CARDWorkSummary.m */; };
@@ -72,6 +74,10 @@
 		2FA0343E166960150086E995 /* CARDPatientsAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientsAddress.m; sourceTree = "<group>"; };
 		2FA03440166960560086E995 /* CARDPatientsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientsItem.h; sourceTree = "<group>"; };
 		2FA03441166960560086E995 /* CARDPatientsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientsItem.m; sourceTree = "<group>"; };
+		2FA03444166966EC0086E995 /* CARDPatientJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientJob.h; sourceTree = "<group>"; };
+		2FA03445166966EC0086E995 /* CARDPatientJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientJob.m; sourceTree = "<group>"; };
+		2FA03447166967D40086E995 /* CARDPatientJobObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientJobObject.h; sourceTree = "<group>"; };
+		2FA03448166967D40086E995 /* CARDPatientJobObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientJobObject.m; sourceTree = "<group>"; };
 		2FA81A4A1669325900FA6EA3 /* CARDBenefitsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDBenefitsItem.h; sourceTree = "<group>"; };
 		2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDBenefitsItem.m; sourceTree = "<group>"; };
 		2FA81A4E1669333C00FA6EA3 /* CARDOfficeAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDOfficeAddress.h; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2FA03443166966DC0086E995 /* CARDWorkAuthorizationList */,
 				2FA0343916695FE20086E995 /* CARDPatientsAll */,
 				2FA81A5416693C5900FA6EA3 /* CARDNotesAll */,
 				2FD47B1116685D9400FE98CF /* CARDAuthentication */,
@@ -236,6 +243,17 @@
 				2FA03441166960560086E995 /* CARDPatientsItem.m */,
 			);
 			name = CARDPatientsAll;
+			sourceTree = "<group>";
+		};
+		2FA03443166966DC0086E995 /* CARDWorkAuthorizationList */ = {
+			isa = PBXGroup;
+			children = (
+				2FA03444166966EC0086E995 /* CARDPatientJob.h */,
+				2FA03445166966EC0086E995 /* CARDPatientJob.m */,
+				2FA03447166967D40086E995 /* CARDPatientJobObject.h */,
+				2FA03448166967D40086E995 /* CARDPatientJobObject.m */,
+			);
+			name = CARDWorkAuthorizationList;
 			sourceTree = "<group>";
 		};
 		2FA81A5416693C5900FA6EA3 /* CARDNotesAll */ = {
@@ -381,6 +399,8 @@
 				2FA0343816695F110086E995 /* CARDNotesObject.m in Sources */,
 				2FA0343F166960150086E995 /* CARDPatientsAddress.m in Sources */,
 				2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */,
+				2FA03446166966EC0086E995 /* CARDPatientJob.m in Sources */,
+				2FA03449166967D40086E995 /* CARDPatientJobObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
