@@ -92,7 +92,7 @@
     [connection start];
 }
 
-- (void)fetchPatientsAll:(NSString *)token withPatientId:(NSNumber *)identification sinceDate:(NSString *)date andCompletion:(void (^)(CARDPatientsItem *, NSError *))block
+- (void)fetchPatientsAll:(NSString *)token withIdentification:(NSNumber *)identification sinceDate:(NSString *)date andCompletion:(void (^)(CARDPatientsItem *, NSError *))block
 {
     NSString *patientsAllPortal = [NSString stringWithFormat:@"patients/all?token=%@&id=%@&since=%@", token, identification, date];
     NSString *requestString = [NSString stringWithFormat:@"%@%@", MAIN_SITE, patientsAllPortal];
