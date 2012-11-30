@@ -26,6 +26,8 @@
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 		2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */; };
 		2FA0343816695F110086E995 /* CARDNotesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343716695F110086E995 /* CARDNotesObject.m */; };
+		2FA0343F166960150086E995 /* CARDPatientsAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343E166960150086E995 /* CARDPatientsAddress.m */; };
+		2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03441166960560086E995 /* CARDPatientsItem.m */; };
 		2FA81A4C1669325900FA6EA3 /* CARDBenefitsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */; };
 		2FA81A501669333C00FA6EA3 /* CARDOfficeAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A4F1669333C00FA6EA3 /* CARDOfficeAddress.m */; };
 		2FA81A531669345600FA6EA3 /* CARDWorkSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A521669345600FA6EA3 /* CARDWorkSummary.m */; };
@@ -66,6 +68,10 @@
 		2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDDayEventChannel.m; sourceTree = "<group>"; };
 		2FA0343616695F110086E995 /* CARDNotesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDNotesObject.h; sourceTree = "<group>"; };
 		2FA0343716695F110086E995 /* CARDNotesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDNotesObject.m; sourceTree = "<group>"; };
+		2FA0343D166960150086E995 /* CARDPatientsAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientsAddress.h; sourceTree = "<group>"; };
+		2FA0343E166960150086E995 /* CARDPatientsAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientsAddress.m; sourceTree = "<group>"; };
+		2FA03440166960560086E995 /* CARDPatientsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientsItem.h; sourceTree = "<group>"; };
+		2FA03441166960560086E995 /* CARDPatientsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientsItem.m; sourceTree = "<group>"; };
 		2FA81A4A1669325900FA6EA3 /* CARDBenefitsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDBenefitsItem.h; sourceTree = "<group>"; };
 		2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDBenefitsItem.m; sourceTree = "<group>"; };
 		2FA81A4E1669333C00FA6EA3 /* CARDOfficeAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDOfficeAddress.h; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2FA0343916695FE20086E995 /* CARDPatientsAll */,
 				2FA81A5416693C5900FA6EA3 /* CARDNotesAll */,
 				2FD47B1116685D9400FE98CF /* CARDAuthentication */,
 				2FD47B1316685DAD00FE98CF /* CARDCalendarDay */,
@@ -218,6 +225,17 @@
 				2FB79749166684F600C52CBF /* CARDConnection.m */,
 			);
 			name = Actors;
+			sourceTree = "<group>";
+		};
+		2FA0343916695FE20086E995 /* CARDPatientsAll */ = {
+			isa = PBXGroup;
+			children = (
+				2FA0343D166960150086E995 /* CARDPatientsAddress.h */,
+				2FA0343E166960150086E995 /* CARDPatientsAddress.m */,
+				2FA03440166960560086E995 /* CARDPatientsItem.h */,
+				2FA03441166960560086E995 /* CARDPatientsItem.m */,
+			);
+			name = CARDPatientsAll;
 			sourceTree = "<group>";
 		};
 		2FA81A5416693C5900FA6EA3 /* CARDNotesAll */ = {
@@ -361,6 +379,8 @@
 				2FA81A531669345600FA6EA3 /* CARDWorkSummary.m in Sources */,
 				2FA81A57166945F600FA6EA3 /* CARDNotesItem.m in Sources */,
 				2FA0343816695F110086E995 /* CARDNotesObject.m in Sources */,
+				2FA0343F166960150086E995 /* CARDPatientsAddress.m in Sources */,
+				2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
