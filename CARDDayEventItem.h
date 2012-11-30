@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSString *actualStartTime;
 @property (nonatomic, strong) NSString *addressLineOne;
 @property (nonatomic, strong) NSString *addressLineTwo;
+@property (nonatomic, strong) NSString *addressType;
 @property (nonatomic, strong) NSString *appointmentDate;
 @property (nonatomic, strong) NSString *appointmentType;
 @property (nonatomic, strong) NSString *city;
@@ -28,7 +29,10 @@
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSNumber *patientId;
+@property (nonatomic, strong) NSString *patientName;
 @property (nonatomic, strong) NSNumber *startSlot;
+@property (nonatomic, strong) NSString *startTime;
+@property (nonatomic, strong) NSString *state;
 @property (nonatomic, strong) NSString *timeStatusId;
 @property (nonatomic, strong) NSNumber *tmTimeCardId;
 @property (nonatomic, strong) NSString *zipCode;

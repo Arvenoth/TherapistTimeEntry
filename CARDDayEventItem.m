@@ -23,6 +23,7 @@
     [self setActualStartTime:[d objectForKey:@"actualStartTime"]];
     [self setAddressLineOne:[d objectForKey:@"addressLine1"]];
     [self setAddressLineTwo:[d objectForKey:@"addressLine2"]];
+    [self setAddressType:[d objectForKey:@"addressType"]];
     [self setAppointmentDate:[d objectForKey:@"appointmentDate"]];
     [self setAppointmentType:[d objectForKey:@"appointmentType"]];
     [self setCity:[d objectForKey:@"city"]];
@@ -31,7 +32,10 @@
     [self setLatitude:[d objectForKey:@"lat"]];
     [self setLongitude:[d objectForKey:@"lng"]];
     [self setPatientId:[d objectForKey:@"patientId"]];
+    [self setPatientName:[d objectForKey:@"patientName"]];
     [self setStartSlot:[d objectForKey:@"startSlot"]];
+    [self setStartTime:[d objectForKey:@"startTime"]];
+    [self setState:[d objectForKey:@"state"]];
     [self setTimeStatusId:[d objectForKey:@"timeStatusId"]];
     [self setTmTimeCardId:[d objectForKey:@"tmTimeCardId"]];
     [self setZipCode:[d objectForKey:@"zipCode"]];

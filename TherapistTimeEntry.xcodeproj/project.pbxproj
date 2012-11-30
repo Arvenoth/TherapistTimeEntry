@@ -25,6 +25,7 @@
 		2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35561666051F0033DD93 /* CARD_globe.png */; };
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 		2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */; };
+		2F57832316682F640031BD42 /* CARDTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57832216682F640031BD42 /* CARDTodayViewController.m */; };
 		2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB797071666724000C52CBF /* CARDFeedStore.m */; };
 		2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */; };
 		2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB79749166684F600C52CBF /* CARDConnection.m */; };
@@ -58,6 +59,8 @@
 		2F4E35571666051F0033DD93 /* CARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD.png; sourceTree = "<group>"; };
 		2F57831916681BE10031BD42 /* CARDDayEventChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDDayEventChannel.h; sourceTree = "<group>"; };
 		2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDDayEventChannel.m; sourceTree = "<group>"; };
+		2F57832116682F640031BD42 /* CARDTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDTodayViewController.h; sourceTree = "<group>"; };
+		2F57832216682F640031BD42 /* CARDTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDTodayViewController.m; sourceTree = "<group>"; };
 		2FB797051666719D00C52CBF /* JSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSerializable.h; sourceTree = "<group>"; };
 		2FB797061666724000C52CBF /* CARDFeedStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDFeedStore.h; sourceTree = "<group>"; };
 		2FB797071666724000C52CBF /* CARDFeedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDFeedStore.m; sourceTree = "<group>"; };
@@ -167,12 +170,8 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */,
-				2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */,
-				2F26FD5E1667CFED0026B8AA /* CARDDayEventItem.h */,
-				2F26FD5F1667CFED0026B8AA /* CARDDayEventItem.m */,
-				2F57831916681BE10031BD42 /* CARDDayEventChannel.h */,
-				2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */,
+				2FD47B1316685DAD00FE98CF /* CARDCalendarDay */,
+				2FD47B1116685D9400FE98CF /* CARDAuthentication */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -182,6 +181,8 @@
 			children = (
 				2F4E3546166602B50033DD93 /* CARDLoginViewController.h */,
 				2F4E3547166602B50033DD93 /* CARDLoginViewController.m */,
+				2F57832116682F640031BD42 /* CARDTodayViewController.h */,
+				2F57832216682F640031BD42 /* CARDTodayViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -210,6 +211,26 @@
 				2FB797051666719D00C52CBF /* JSONSerializable.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2FD47B1116685D9400FE98CF /* CARDAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				2FB79709166673DE00C52CBF /* CARDAuthenticationItem.h */,
+				2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */,
+			);
+			name = CARDAuthentication;
+			sourceTree = "<group>";
+		};
+		2FD47B1316685DAD00FE98CF /* CARDCalendarDay */ = {
+			isa = PBXGroup;
+			children = (
+				2F26FD5E1667CFED0026B8AA /* CARDDayEventItem.h */,
+				2F26FD5F1667CFED0026B8AA /* CARDDayEventItem.m */,
+				2F57831916681BE10031BD42 /* CARDDayEventChannel.h */,
+				2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */,
+			);
+			name = CARDCalendarDay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +314,7 @@
 				2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */,
 				2F26FD601667CFED0026B8AA /* CARDDayEventItem.m in Sources */,
 				2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */,
+				2F57832316682F640031BD42 /* CARDTodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
