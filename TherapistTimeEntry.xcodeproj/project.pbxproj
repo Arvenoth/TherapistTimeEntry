@@ -26,6 +26,8 @@
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 		2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */; };
 		2F57832316682F640031BD42 /* CARDTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57832216682F640031BD42 /* CARDTodayViewController.m */; };
+		2FA81A4C1669325900FA6EA3 /* CARDBenefitsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */; };
+		2FADC5091669290300ED9CA2 /* CARDProfileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FADC5081669290300ED9CA2 /* CARDProfileItem.m */; };
 		2FB797081666724000C52CBF /* CARDFeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB797071666724000C52CBF /* CARDFeedStore.m */; };
 		2FB7970B166673DE00C52CBF /* CARDAuthenticationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB7970A166673DE00C52CBF /* CARDAuthenticationItem.m */; };
 		2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB79749166684F600C52CBF /* CARDConnection.m */; };
@@ -61,6 +63,10 @@
 		2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDDayEventChannel.m; sourceTree = "<group>"; };
 		2F57832116682F640031BD42 /* CARDTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDTodayViewController.h; sourceTree = "<group>"; };
 		2F57832216682F640031BD42 /* CARDTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDTodayViewController.m; sourceTree = "<group>"; };
+		2FA81A4A1669325900FA6EA3 /* CARDBenefitsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDBenefitsItem.h; sourceTree = "<group>"; };
+		2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDBenefitsItem.m; sourceTree = "<group>"; };
+		2FADC5071669290300ED9CA2 /* CARDProfileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDProfileItem.h; sourceTree = "<group>"; };
+		2FADC5081669290300ED9CA2 /* CARDProfileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDProfileItem.m; sourceTree = "<group>"; };
 		2FB797051666719D00C52CBF /* JSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONSerializable.h; sourceTree = "<group>"; };
 		2FB797061666724000C52CBF /* CARDFeedStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDFeedStore.h; sourceTree = "<group>"; };
 		2FB797071666724000C52CBF /* CARDFeedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDFeedStore.m; sourceTree = "<group>"; };
@@ -170,8 +176,9 @@
 		2F4E3540166601FD0033DD93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2FD47B1316685DAD00FE98CF /* CARDCalendarDay */,
 				2FD47B1116685D9400FE98CF /* CARDAuthentication */,
+				2FD47B1316685DAD00FE98CF /* CARDCalendarDay */,
+				2FADC5031669277000ED9CA2 /* CARDProfile */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -203,6 +210,17 @@
 				2FB79749166684F600C52CBF /* CARDConnection.m */,
 			);
 			name = Actors;
+			sourceTree = "<group>";
+		};
+		2FADC5031669277000ED9CA2 /* CARDProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2FADC5071669290300ED9CA2 /* CARDProfileItem.h */,
+				2FADC5081669290300ED9CA2 /* CARDProfileItem.m */,
+				2FA81A4A1669325900FA6EA3 /* CARDBenefitsItem.h */,
+				2FA81A4B1669325900FA6EA3 /* CARDBenefitsItem.m */,
+			);
+			name = CARDProfile;
 			sourceTree = "<group>";
 		};
 		2FB797031666715E00C52CBF /* Protocols */ = {
@@ -315,6 +333,8 @@
 				2F26FD601667CFED0026B8AA /* CARDDayEventItem.m in Sources */,
 				2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */,
 				2F57832316682F640031BD42 /* CARDTodayViewController.m in Sources */,
+				2FADC5091669290300ED9CA2 /* CARDProfileItem.m in Sources */,
+				2FA81A4C1669325900FA6EA3 /* CARDBenefitsItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

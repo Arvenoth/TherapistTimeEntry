@@ -14,8 +14,6 @@
     NSMutableString *currentString;
 }
 
-@property (nonatomic, weak) id parentParserDelegate;
-
 @property (nonatomic, strong) NSNumber *actualEndTime;
 @property (nonatomic, strong) NSString *actualStartTime;
 @property (nonatomic, strong) NSString *addressLineOne;

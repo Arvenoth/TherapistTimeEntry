@@ -34,7 +34,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signinPressed" destination="Y5z-Kd-cPp" eventType="touchUpInside" id="XUN-KU-vTm"/>
-                                    <segue destination="ytA-Hw-sEO" kind="replace" identifier="segueToTodayView" splitViewControllerTargetIndex="1" id="4AV-9T-KkY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-J6-FFL">
@@ -107,80 +106,6 @@
             </objects>
             <point key="canvasLocation" x="-3847" y="1087"/>
         </scene>
-        <!--Today View Controller-->
-        <scene sceneID="vnM-7C-hkN">
-            <objects>
-                <viewController id="EFU-UK-3rg" customClass="CARDTodayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r8K-vk-ytn">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cL7-LS-2BH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1871" y="1555"/>
-        </scene>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="EbJ-wj-Su1">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="T5o-Wx-m1V" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uhr-2e-qSU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="788"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ETI-qH-gBc">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="T5o-Wx-m1V" id="7cA-5i-7G4"/>
-                            <outlet property="delegate" destination="T5o-Wx-m1V" id="sLj-8z-uz1"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="d0B-tg-Z7h"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x8q-bq-fTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1337" y="619"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Dga-pH-gjh">
-            <objects>
-                <navigationController id="Dui-Y3-2Qc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="AFz-ue-kIf">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="T5o-Wx-m1V" kind="relationship" relationship="rootViewController" id="V7c-nf-7nz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VdJ-ct-jXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1871" y="618"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="pTn-ev-nuq">
-            <objects>
-                <splitViewController id="ytA-Hw-sEO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <connections>
-                        <segue destination="Dui-Y3-2Qc" kind="relationship" relationship="masterViewController" id="5WS-65-gu7"/>
-                        <segue destination="EFU-UK-3rg" kind="relationship" relationship="detailViewController" id="KKf-fO-Jfu"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DYc-yl-Mno" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2853" y="1085"/>
-        </scene>
     </scenes>
     <resources>
         <image name="CARD_globe.png" width="1097" height="1050"/>
@@ -194,9 +119,6 @@
                 <relationship kind="outlet" name="rememberLastUser" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
             </relationships>
-        </class>
-        <class className="CARDTodayViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CARDTodayViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
