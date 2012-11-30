@@ -10,8 +10,6 @@
 
 @implementation CARDDayEventItem
 
-@synthesize parentParserDelegate;
-
 @synthesize actualEndTime, actualStartTime, addressLineOne, addressLineTwo,
             appointmentDate, appointmentType, city, endSlot, endTime,
             latitude, longitude, patientId, startSlot, timeStatusId,

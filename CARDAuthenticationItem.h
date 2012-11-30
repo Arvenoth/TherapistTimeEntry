@@ -14,8 +14,6 @@
     NSMutableString *currentString;
 }
 
-@property (nonatomic, weak) id parentParserDelegate;
-
 @property (nonatomic, strong) NSString *message;
 @property (nonatomic, strong) NSNumber *status;
 @property (nonatomic, strong) NSString *token;

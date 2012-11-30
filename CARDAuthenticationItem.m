@@ -10,7 +10,7 @@
 
 @implementation CARDAuthenticationItem
 
-@synthesize parentParserDelegate, message, status, token;
+@synthesize message, status, token;
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {

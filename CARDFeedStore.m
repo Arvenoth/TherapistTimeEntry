@@ -89,6 +89,11 @@
     [connection start];
 }
 
+
+//
+// TODO :: Write the helper function to make the rest of the function calls smaller and easier
+//
+
 - (NSURLRequest *)createRequestFromPortal:(NSString *)portal andParameters:(NSArray *)parameters
 {
     //
