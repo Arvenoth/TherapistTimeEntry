@@ -10,6 +10,8 @@
 
 @implementation CARDWorkSummary
 
+@synthesize billableHoursWorked, nonBillableHoursWorked, overtimeHoursWorked, regularHoursWorked;
+
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
     [self setBillableHoursWorked:[d objectForKey:@"billableHoursWorked"]];

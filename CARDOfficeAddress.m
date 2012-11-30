@@ -10,6 +10,9 @@
 
 @implementation CARDOfficeAddress
 
+@synthesize addressType,city, latitude, longitude, addressOne, addressTwo,
+            state, zipCode;
+
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
     [self setAddressType:[d objectForKey:@"addressType"]];

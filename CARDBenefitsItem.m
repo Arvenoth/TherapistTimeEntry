@@ -10,6 +10,8 @@
 
 @implementation CARDBenefitsItem
 
+@synthesize availableSickTime, availableVacationTime, usedSickTime, usedVacationTime;
+
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
     [self setAvailableSickTime:[d objectForKey:@"availableSickTime"]];

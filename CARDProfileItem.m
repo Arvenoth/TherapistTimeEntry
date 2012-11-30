@@ -10,4 +10,15 @@
 
 @implementation CARDProfileItem
 
+@synthesize hrEmployeeId, name, benefits, officeAddress, workSummary;
+
+- (void)readFromJSONDictionary:(NSDictionary *)d
+{
+    [self setHrEmployeeId:[d objectForKey:@"hrEmployeeId"]];
+    [self setName:[d objectForKey:@"name"]];
+    [self setBenefits:[d objectForKey:@"benefits"]];
+    [self setOfficeAddress:[d objectForKey:@"officeAddress"]];
+    [self setWorkSummary:[d objectForKey:@"workSummary"]];
+}
+
 @end
