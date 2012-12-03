@@ -18,7 +18,7 @@
 #define MAIN_SITE @"http://phonest.centerforautism.com/"
 
 @interface CARDFeedStore()
-- (NSURLRequest *)createRequestFromPortal:(NSString *)portal andParameters:(NSArray *)parameters;
+
 @end
 
 @implementation CARDFeedStore
@@ -141,21 +141,6 @@
     [connection setJsonRootObject:workAuthorizationResponse];
     
     [connection start];
-}
-
-//
-// TODO :: Write the helper function to make the rest of the function calls smaller and easier
-//
-
-- (NSURLRequest *)createRequestFromPortal:(NSString *)portal andParameters:(NSArray *)parameters
-{
-    //
-    // This is a helper function which will recieve the portal which it will target and insert
-    // whatever required parameters are included
-    //
-    // NSString *requestedPortal = [NSString stringWithFormat:portal];
-    
-    return nil;
 }
 
 @end

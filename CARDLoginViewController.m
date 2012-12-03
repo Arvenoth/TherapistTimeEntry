@@ -20,7 +20,7 @@
 
 @implementation CARDLoginViewController
 
-@synthesize username, password, authenticationResponse;
+@synthesize username, password, signInButton, authenticationResponse;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -102,7 +102,11 @@
             
             [failureAlert show];
         }
+        
+        [[self signInButton] setEnabled:YES];
     };
+    
+    [[self signInButton] setEnabled:NO];
     
     // Initiate the request
     [[CARDFeedStore sharedStore] fetchAuthenticationCredentials:[self username]

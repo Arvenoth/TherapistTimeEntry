@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *rememberLastUser;
 
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+
 - (void)fetchAuthenticationResponse;
 
 @end
