@@ -12,6 +12,18 @@
 
 @synthesize hrEmployeeId, name, benefits, officeAddress, workSummary;
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        
+    }
+    
+    return self;
+}
+
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
     [self setHrEmployeeId:[d objectForKey:@"hrEmployeeId"]];
