@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Y5z-Kd-cPp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Mgq-Ea-czl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-10611" y="-1005"/>
         </scene>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="urT-za-Qak">
             <objects>
-                <viewController id="Mgq-Ea-czl" sceneMemberID="viewController">
+                <viewController id="Mgq-Ea-czl" customClass="CARDTodayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptD-Uc-y1J">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -175,6 +175,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="detailsPressed" destination="Mgq-Ea-czl" eventType="touchUpInside" id="rMw-0P-uz0"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eJ-xt-i6y">
                                         <constraints>
@@ -343,6 +346,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="profilePressed" destination="Mgq-Ea-czl" eventType="touchUpInside" id="tGV-Kf-sEX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -384,6 +390,17 @@
                             <constraint firstItem="2xR-SJ-hHd" firstAttribute="top" secondItem="ptD-Uc-y1J" secondAttribute="top" constant="430" id="zSU-JR-vbI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="patientAddressLabel" destination="0V9-Ba-dhE" id="Bsq-aN-Ahb"/>
+                        <outlet property="patientCityLabel" destination="1eJ-xt-i6y" id="irn-jV-3Qk"/>
+                        <outlet property="patientEndTimeLabel" destination="aDQ-Ps-ilM" id="Zxx-dn-yI8"/>
+                        <outlet property="patientNameLabel" destination="qoR-n3-U9g" id="75G-OU-a5r"/>
+                        <outlet property="patientStartTimeLabel" destination="8lr-8B-7nS" id="BrZ-c8-6jU"/>
+                        <outlet property="patientStateLabel" destination="gDS-av-p2d" id="kj0-8O-w0e"/>
+                        <outlet property="patientZipLabel" destination="DlW-HX-Ket" id="SU7-co-aLp"/>
+                        <outlet property="usernameCityLabel" destination="zFx-SM-hSH" id="LHs-Ke-UeM"/>
+                        <outlet property="usernameLabel" destination="v5F-F3-Tfe" id="5lQ-hF-5PL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zed-6Y-FtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,6 +419,21 @@
                 <relationship kind="outlet" name="rememberLastUser" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CARDTodayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CARDTodayViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="patientAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientCityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientEndTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientStartTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientStateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientZipLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profilePressed" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameCityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

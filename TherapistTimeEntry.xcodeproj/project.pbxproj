@@ -40,6 +40,7 @@
 		2FB7974A166684F600C52CBF /* CARDConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB79749166684F600C52CBF /* CARDConnection.m */; };
 		2FB7974C1666BF7B00C52CBF /* CARD_w_Letters.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB7974B1666BF7B00C52CBF /* CARD_w_Letters.png */; };
 		2FB797511666C8B000C52CBF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB797501666C8B000C52CBF /* CoreLocation.framework */; };
+		2FF3483A166D2E070048D901 /* CARDTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF34839166D2E070048D901 /* CARDTodayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		2FB79749166684F600C52CBF /* CARDConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDConnection.m; sourceTree = "<group>"; };
 		2FB7974B1666BF7B00C52CBF /* CARD_w_Letters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD_w_Letters.png; sourceTree = "<group>"; };
 		2FB797501666C8B000C52CBF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2FF34838166D2E070048D901 /* CARDTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDTodayViewController.h; sourceTree = "<group>"; };
+		2FF34839166D2E070048D901 /* CARDTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDTodayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 			children = (
 				2F4E3546166602B50033DD93 /* CARDLoginViewController.h */,
 				2F4E3547166602B50033DD93 /* CARDLoginViewController.m */,
+				2FF34838166D2E070048D901 /* CARDTodayViewController.h */,
+				2FF34839166D2E070048D901 /* CARDTodayViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */,
 				2FA03446166966EC0086E995 /* CARDPatientJob.m in Sources */,
 				2FA03449166967D40086E995 /* CARDPatientJobObject.m in Sources */,
+				2FF3483A166D2E070048D901 /* CARDTodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
