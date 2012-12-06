@@ -26,7 +26,7 @@
 }
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    [self setStatus:[d objectForKey:@"status"]];
+    [status readFromJSONDictionary:[d objectForKey:@"status"]];
     
     NSArray *notes = [d objectForKey:@"notes"];
     

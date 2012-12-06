@@ -28,7 +28,7 @@
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    [self setStatus:[d objectForKey:@"status"]];
+    [status readFromJSONDictionary:[d objectForKey:@"status"]];
     
     NSArray *events = [d objectForKey:@"dayEvent"];
     

@@ -180,6 +180,7 @@
                                         </state>
                                         <connections>
                                             <action selector="detailsPressed" destination="Mgq-Ea-czl" eventType="touchUpInside" id="rMw-0P-uz0"/>
+                                            <segue destination="RQA-Cf-nmk" kind="push" identifier="transitionToDetailPage" id="VnT-kB-Mcq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eJ-xt-i6y">
@@ -533,6 +534,7 @@
                             <constraint firstAttribute="trailing" secondItem="sKV-mh-Y4t" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zj9-os-FwY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZE6-la-vfn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFJ-8D-vB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

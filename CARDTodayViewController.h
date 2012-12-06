@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class CARDDayEventChannel;
+@class CARDAuthenticationItem;
+
 @interface CARDTodayViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;

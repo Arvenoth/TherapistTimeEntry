@@ -28,6 +28,9 @@
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
+    [status readFromJSONDictionary:[d objectForKey:@"status"]];
+    [address readFromJSONDictionary:[d objectForKey:@"address"]];
+    
     [self setBirthDate:[d objectForKey:@"birthDate"]];
     [self setCustomerSiteId:[d objectForKey:@"customerSiteId"]];
     [self setGuardianName:[d objectForKey:@"guardianName"]];
@@ -36,8 +39,6 @@
     [self setScheduledTime:[d objectForKey:@"scheduledTime"]];
     [self setStartTime:[d objectForKey:@"startTime"]];
     [self setTmTimeCardId:[d objectForKey:@"tmTimeCardId"]];
-    [self setAddress:[d objectForKey:@"address"]];
-    [self setStatus:[d objectForKey:@"status"]];
 }
 
 @end

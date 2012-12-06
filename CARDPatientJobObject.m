@@ -14,8 +14,8 @@
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    [self setPatientJob:[d objectForKey:@"patientJob"]];
-    [self setStatus:[d objectForKey:@"status"]];
+    [status readFromJSONDictionary:[d objectForKey:@"status"]];
+    [patientJob readFromJSONDictionary:[d objectForKey:@"patientJob"]];
 }
 
 @end

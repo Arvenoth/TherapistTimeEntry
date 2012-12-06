@@ -77,6 +77,13 @@
                                                              otherButtonTitles:nil, nil];
                 
                 [successAlert show];
+                
+                [[CARDFeedStore sharedStore] setCurrentToken:[[self authenticationResponse] token]];
+                
+                NSLog(@"Current Token is %@", [[CARDFeedStore sharedStore] currentToken]);
+                
+                // Push this new view on to the navigation stack
+                [self performSegueWithIdentifier:@"transitionToTodayPage" sender:self];
             }
             else
             {
@@ -87,15 +94,6 @@
                                                              otherButtonTitles:nil, nil];
                                              
                 [loginFailure show];
-                
-                [[CARDFeedStore sharedStore] setCurrentToken:[[self authenticationResponse] token]];
-                
-                NSLog(@"Current Token is %@", [[CARDFeedStore sharedStore] currentToken]);
-                
-                CARDTodayViewController *todayViewController = [[CARDTodayViewController alloc] initWithNibName:@"TodayViewController" bundle:nil];
-                
-                // Push this new view on to the navigation stack
-                [self performSegueWithIdentifier:@"transitionToTodayPage" sender:self];
             }
         }
         else
