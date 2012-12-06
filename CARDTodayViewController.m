@@ -10,6 +10,7 @@
 #import "CARDFeedStore.h"
 #import "CARDAuthenticationItem.h"
 #import "CARDDayEventChannel.h"
+#import "CARDDayEventItem.h"
 
 @interface CARDTodayViewController ()
 
@@ -24,6 +25,14 @@
 @synthesize usernameLabel, usernameCityLabel, patientNameLabel, patientAddressLabel,
             patientCityLabel, patientEndTimeLabel, patientStartTimeLabel, patientStateLabel,
             patientZipLabel;
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    for (CARDDayEventItem *item in [dayEventResponse dayEvents])
+    {
+        NSLog(@"%@%@%@", [item actualStartTime], [item actualEndTime], [item patientName]);
+    }
+}
 
 - (IBAction)profilePressed
 {

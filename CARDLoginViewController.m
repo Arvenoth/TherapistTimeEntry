@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
+
 @property (nonatomic, strong) CARDAuthenticationItem *authenticationResponse;
 @property (nonatomic, strong) CARDDayEventChannel *dayEventReponse;
 
@@ -69,10 +70,12 @@
             {
                 [[CARDFeedStore sharedStore] setCurrentToken:[[self authenticationResponse] token]];
                 
-                NSLog(@"Current Token is %@", [[CARDFeedStore sharedStore] currentToken]);
+                UIStoryboard *storyboard = [self storyboard];
                 
-                // Push this new view on to the navigation stack
-                [self performSegueWithIdentifier:@"transitionToTodayPage" sender:self];
+                CARDTodayViewController *todayViewController = [storyboard instantiateViewControllerWithIdentifier:@"CARDNavigationController"];
+                
+                [self presentViewController:todayViewController animated:YES completion:nil];
+                
             }
             else
             {
@@ -117,8 +120,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"transitionToTodayPage"])
-    {
-        CARDTodayViewController *todayViewController = [segue destinationViewController];
+    {        
+        CARDTodayViewController *todayViewController = [[CARDTodayViewController alloc] init];
         
         void (^completionBlock)(CARDDayEventChannel *obj, NSError *err) = ^(CARDDayEventChannel *obj, NSError *err)
         {
@@ -126,7 +129,7 @@
             {                
                 dayEventReponse = obj;
                 
-                NSLog(@"dayEventResponse: \nmessage: %@\nstatus: %@\ntoken:%@\n", [[dayEventReponse status] message], [[dayEventReponse status] status], [[dayEventReponse status] token]);
+                NSLog(@"This should not be the first call!!\ndayEventResponse: \nmessage: %@\nstatus: %@\ntoken:%@\n", [[dayEventReponse status] message], [[dayEventReponse status] status], [[dayEventReponse status] token]);
             }
             else
             {
@@ -137,7 +140,8 @@
         [[CARDFeedStore sharedStore] fetchCalendarDayEvents:[[CARDFeedStore sharedStore] currentToken]
                                                      onDate:@"11/30/2012"
                                               andCompletion:completionBlock];
-
+        
+        [todayViewController setDayEventResponse:dayEventReponse];
     }
 }
 

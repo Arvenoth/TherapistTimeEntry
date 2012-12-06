@@ -31,7 +31,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signinPressed" destination="Y5z-Kd-cPp" eventType="touchUpInside" id="XUN-KU-vTm"/>
-                                    <segue destination="4Vu-bg-1Q0" kind="modal" identifier="transitionToTodayPage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xGT-t4-0Ha"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CARD_globe.png" translatesAutoresizingMaskIntoConstraints="NO" id="kWC-4C-HBv">
@@ -532,7 +531,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Pog-dg-i9c">
             <objects>
-                <navigationController id="4Vu-bg-1Q0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CARDNavigationController" id="4Vu-bg-1Q0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oKx-hE-x6l">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
@@ -552,6 +551,36 @@
         <image name="CARD_globe.png" width="1097" height="1050"/>
         <image name="CARD_w_Letters.png" width="1070" height="420"/>
     </resources>
+    <classes>
+        <class className="CARDLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CARDLoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="signInButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CARDPatientDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CARDPatientDetailViewController.h"/>
+        </class>
+        <class className="CARDTodayViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CARDTodayViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="patientAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientCityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientEndTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientStartTimeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientStateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="patientZipLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameCityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
