@@ -15,9 +15,7 @@
     NSMutableString *currentString;
 }
 
-@property (nonatomic, weak) id parentParserDelegate;
-
-@property (nonatomic, strong) CARDAuthenticationItem *status;
 @property (nonatomic, readonly, strong) NSMutableArray *dayEvents;
+@property (nonatomic, strong) CARDAuthenticationItem *status;
 
 @end

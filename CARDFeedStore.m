@@ -23,6 +23,8 @@
 
 @implementation CARDFeedStore
 
+@synthesize currentToken;
+
 + (CARDFeedStore *)sharedStore
 {
     static CARDFeedStore *feedStore = nil;

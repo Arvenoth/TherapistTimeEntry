@@ -13,6 +13,19 @@
 @synthesize birthDate, customerSiteId, guardianName, name, patientId, progressTrend,
             scheduledTime, startTime, tmTimeCardId, address, status;
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        address = [[CARDPatientsAddress alloc] init];
+        status = [[CARDAuthenticationItem alloc] init];
+    }
+    
+    return self;
+}
+
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
     [self setBirthDate:[d objectForKey:@"birthDate"]];

@@ -12,8 +12,11 @@
 #import "JSONSerializable.h"
 
 @interface CARDNotesObject : NSObject <JSONSerializable>
+{
+    NSMutableString *currentString;
+}
 
-@property (nonatomic, strong) CARDNotesItem *notes;
+@property (nonatomic, readonly, strong) NSMutableArray *allNotes;
 @property (nonatomic, strong) CARDAuthenticationItem *status;
 
 @end

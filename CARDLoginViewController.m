@@ -8,6 +8,7 @@
 
 #import "CARDLoginViewController.h"
 #import "CARDAuthenticationItem.h"
+#import "CARDTodayViewController.h"
 #import "CARDFeedStore.h"
 
 @interface CARDLoginViewController ()
@@ -86,6 +87,15 @@
                                                              otherButtonTitles:nil, nil];
                                              
                 [loginFailure show];
+                
+                [[CARDFeedStore sharedStore] setCurrentToken:[[self authenticationResponse] token]];
+                
+                NSLog(@"Current Token is %@", [[CARDFeedStore sharedStore] currentToken]);
+                
+                CARDTodayViewController *todayViewController = [[CARDTodayViewController alloc] initWithNibName:@"TodayViewController" bundle:nil];
+                
+                // Push this new view on to the navigation stack
+                [self performSegueWithIdentifier:@"transitionToTodayPage" sender:self];
             }
         }
         else

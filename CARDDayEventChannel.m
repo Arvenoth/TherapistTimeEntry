@@ -11,7 +11,7 @@
 
 @implementation CARDDayEventChannel
 
-@synthesize parentParserDelegate, status, dayEvents;
+@synthesize status, dayEvents;
 
 - (id)init
 {
@@ -28,7 +28,7 @@
 
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    [status readFromJSONDictionary:[d objectForKey:@"status"]];
+    [self setStatus:[d objectForKey:@"status"]];
     
     NSArray *events = [d objectForKey:@"dayEvent"];
     

@@ -10,12 +10,34 @@
 
 @implementation CARDNotesObject
 
-@synthesize notes, status;
+@synthesize allNotes, status;
 
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        allNotes = [[NSMutableArray alloc] init];
+        status = [[CARDAuthenticationItem alloc] init];
+    }
+    
+    return self;
+}
 - (void)readFromJSONDictionary:(NSDictionary *)d
 {
-    [self setNotes:[d objectForKey:@"notes"]];
     [self setStatus:[d objectForKey:@"status"]];
+    
+    NSArray *notes = [d objectForKey:@"notes"];
+    
+    for (NSDictionary *note in notes)
+    {
+        CARDNotesItem *i = [[CARDNotesItem alloc] init];
+        
+        [i readFromJSONDictionary:note];
+        
+        [allNotes addObject:i];
+    }
 }
 
 @end

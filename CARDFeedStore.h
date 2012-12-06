@@ -17,6 +17,8 @@
 
 @interface CARDFeedStore : NSObject
 
+@property (nonatomic, strong) NSString *currentToken;
+
 + (CARDFeedStore *)sharedStore;
 
 - (void)fetchAuthenticationCredentials:(NSString *)username withPassword:(NSString *)password andCompletion:(void(^)(CARDAuthenticationItem *obj, NSError *err))block;

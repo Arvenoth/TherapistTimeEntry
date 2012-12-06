@@ -18,7 +18,9 @@
     
     if (self)
     {
-        
+        benefits = [[CARDBenefitsItem alloc] init];
+        officeAddress = [[CARDOfficeAddress alloc] init];
+        workSummary = [[CARDWorkSummary alloc] init];
     }
     
     return self;
