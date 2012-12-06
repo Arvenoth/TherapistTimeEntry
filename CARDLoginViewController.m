@@ -8,6 +8,7 @@
 
 #import "CARDLoginViewController.h"
 #import "CARDAuthenticationItem.h"
+#import "CARDDayEventChannel.h"
 #import "CARDTodayViewController.h"
 #import "CARDFeedStore.h"
 
@@ -16,12 +17,13 @@
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) CARDAuthenticationItem *authenticationResponse;
+@property (nonatomic, strong) CARDDayEventChannel *dayEventReponse;
 
 @end
 
 @implementation CARDLoginViewController
 
-@synthesize username, password, signInButton, authenticationResponse;
+@synthesize username, password, signInButton, authenticationResponse, dayEventReponse;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,11 +43,6 @@
     [[self passwordTextField] setText:@""];
     
     [self fetchAuthenticationResponse];
-}
-
-- (IBAction)forgotPasswordPressed
-{
-    NSLog(@"Password forgotten...");
 }
 
 - (void)fetchAuthenticationResponse
@@ -70,14 +67,6 @@
             
             if ([[self authenticationResponse] status] == numZero)
             {
-                UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                                       message:[[self authenticationResponse] token]
-                                                                      delegate:nil
-                                                             cancelButtonTitle:@"OK"
-                                                             otherButtonTitles:nil, nil];
-                
-                [successAlert show];
-                
                 [[CARDFeedStore sharedStore] setCurrentToken:[[self authenticationResponse] token]];
                 
                 NSLog(@"Current Token is %@", [[CARDFeedStore sharedStore] currentToken]);
@@ -101,6 +90,9 @@
             // Things have obviously gone wrong...
             NSString *errorMessage = [NSString stringWithFormat:@"Fetch Failed: %@", [err localizedDescription]];
             
+            // Log the message
+            NSLog(@"Fetch failed: %@", errorMessage);
+            
             // Create and show an alert view
             UIAlertView *failureAlert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                    message:errorMessage
@@ -120,6 +112,33 @@
     [[CARDFeedStore sharedStore] fetchAuthenticationCredentials:[self username]
                                                    withPassword:[self password]
                                                   andCompletion:completionBlock];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"transitionToTodayPage"])
+    {
+        CARDTodayViewController *todayViewController = [segue destinationViewController];
+        
+        void (^completionBlock)(CARDDayEventChannel *obj, NSError *err) = ^(CARDDayEventChannel *obj, NSError *err)
+        {
+            if (!err)
+            {                
+                dayEventReponse = obj;
+                
+                NSLog(@"dayEventResponse: \nmessage: %@\nstatus: %@\ntoken:%@\n", [[dayEventReponse status] message], [[dayEventReponse status] status], [[dayEventReponse status] token]);
+            }
+            else
+            {
+                NSLog(@"Error: %@", [err localizedDescription]);
+            }
+        };
+        
+        [[CARDFeedStore sharedStore] fetchCalendarDayEvents:[[CARDFeedStore sharedStore] currentToken]
+                                                     onDate:@"11/30/2012"
+                                              andCompletion:completionBlock];
+
+    }
 }
 
 @end

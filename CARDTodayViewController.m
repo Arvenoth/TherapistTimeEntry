@@ -13,42 +13,17 @@
 
 @interface CARDTodayViewController ()
 
-@property (nonatomic, strong) CARDDayEventChannel *dayEventResponse;
-@property (nonatomic, strong) CARDAuthenticationItem *authResponse;
-
 @end
 
 @implementation CARDTodayViewController
 
+// Synthesize the public data variables
 @synthesize dayEventResponse, authResponse;
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    NSLog(@"Here we are");
-    [super viewDidAppear:animated];
-    
-    if (self)
-    {
-        void (^completionBlock)(CARDDayEventChannel *obj, NSError *err) = ^(CARDDayEventChannel *obj, NSError *err)
-        {
-            if (!err)
-            {
-                dayEventResponse = obj;
-                authResponse = [[self dayEventResponse] status];
-                
-                NSLog(@"%@", [[self authResponse] message]);
-            }
-            else
-            {
-                NSLog(@"Error: %@", [err localizedDescription]);
-            }
-        };
-        
-        [[CARDFeedStore sharedStore] fetchCalendarDayEvents:[[CARDFeedStore sharedStore] currentToken]
-                                                     onDate:@"11/30/2012"
-                                              andCompletion:completionBlock];
-    }
-}
+// Synthesize the public variables to the display outlets
+@synthesize usernameLabel, usernameCityLabel, patientNameLabel, patientAddressLabel,
+            patientCityLabel, patientEndTimeLabel, patientStartTimeLabel, patientStateLabel,
+            patientZipLabel;
 
 - (IBAction)profilePressed
 {

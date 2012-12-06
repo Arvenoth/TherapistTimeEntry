@@ -31,10 +31,22 @@
     
     if (!feedStore)
     {
-        feedStore = [[CARDFeedStore alloc] init];
+        feedStore = [[CARDFeedStore allocWithZone:nil] init];
     }
     
     return feedStore;
+}
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        
+    }
+    
+    return self;
 }
 
 - (void)fetchAuthenticationCredentials:(NSString *)username withPassword:(NSString *)password andCompletion:(void (^)(CARDAuthenticationItem *, NSError *))block

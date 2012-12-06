@@ -25,6 +25,8 @@
 		2F4E355B1666051F0033DD93 /* CARD_globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35561666051F0033DD93 /* CARD_globe.png */; };
 		2F4E355C1666051F0033DD93 /* CARD.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F4E35571666051F0033DD93 /* CARD.png */; };
 		2F57831B16681BE10031BD42 /* CARDDayEventChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */; };
+		2F812758167124E700EE2A42 /* CARDPatientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F812757167124E700EE2A42 /* CARDPatientDetailViewController.m */; };
+		2F81275F1671265E00EE2A42 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F81275E1671265E00EE2A42 /* MapKit.framework */; };
 		2FA0343816695F110086E995 /* CARDNotesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343716695F110086E995 /* CARDNotesObject.m */; };
 		2FA0343F166960150086E995 /* CARDPatientsAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0343E166960150086E995 /* CARDPatientsAddress.m */; };
 		2FA03442166960560086E995 /* CARDPatientsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03441166960560086E995 /* CARDPatientsItem.m */; };
@@ -69,6 +71,9 @@
 		2F4E35571666051F0033DD93 /* CARD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CARD.png; sourceTree = "<group>"; };
 		2F57831916681BE10031BD42 /* CARDDayEventChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDDayEventChannel.h; sourceTree = "<group>"; };
 		2F57831A16681BE10031BD42 /* CARDDayEventChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDDayEventChannel.m; sourceTree = "<group>"; };
+		2F812756167124E700EE2A42 /* CARDPatientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientDetailViewController.h; sourceTree = "<group>"; };
+		2F812757167124E700EE2A42 /* CARDPatientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDPatientDetailViewController.m; sourceTree = "<group>"; };
+		2F81275E1671265E00EE2A42 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2FA0343616695F110086E995 /* CARDNotesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDNotesObject.h; sourceTree = "<group>"; };
 		2FA0343716695F110086E995 /* CARDNotesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARDNotesObject.m; sourceTree = "<group>"; };
 		2FA0343D166960150086E995 /* CARDPatientsAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARDPatientsAddress.h; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F81275F1671265E00EE2A42 /* MapKit.framework in Frameworks */,
 				2FB797511666C8B000C52CBF /* CoreLocation.framework in Frameworks */,
 				2F4E3522166601CE0033DD93 /* UIKit.framework in Frameworks */,
 				2F4E3524166601CE0033DD93 /* Foundation.framework in Frameworks */,
@@ -144,10 +150,11 @@
 		2F4E3520166601CE0033DD93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F4E3521166601CE0033DD93 /* UIKit.framework */,
-				2F4E3523166601CE0033DD93 /* Foundation.framework */,
 				2F4E3525166601CE0033DD93 /* CoreGraphics.framework */,
 				2FB797501666C8B000C52CBF /* CoreLocation.framework */,
+				2F4E3523166601CE0033DD93 /* Foundation.framework */,
+				2F81275E1671265E00EE2A42 /* MapKit.framework */,
+				2F4E3521166601CE0033DD93 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +224,8 @@
 				2F4E3547166602B50033DD93 /* CARDLoginViewController.m */,
 				2FF34838166D2E070048D901 /* CARDTodayViewController.h */,
 				2FF34839166D2E070048D901 /* CARDTodayViewController.m */,
+				2F812756167124E700EE2A42 /* CARDPatientDetailViewController.h */,
+				2F812757167124E700EE2A42 /* CARDPatientDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				2FA03446166966EC0086E995 /* CARDPatientJob.m in Sources */,
 				2FA03449166967D40086E995 /* CARDPatientJobObject.m in Sources */,
 				2FF3483A166D2E070048D901 /* CARDTodayViewController.m in Sources */,
+				2F812758167124E700EE2A42 /* CARDPatientDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

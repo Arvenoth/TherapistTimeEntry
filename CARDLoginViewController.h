@@ -13,8 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
-@property (weak, nonatomic) IBOutlet UISwitch *rememberLastUser;
-
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 
 - (void)fetchAuthenticationResponse;

@@ -13,6 +13,9 @@
 
 @interface CARDTodayViewController : UIViewController
 
+//
+// UI Elements
+//
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameCityLabel;
 
@@ -23,5 +26,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *patientZipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *patientStartTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *patientEndTimeLabel;
+
+//
+// Data elements
+//
+@property (nonatomic, strong) CARDDayEventChannel *dayEventResponse;
+@property (nonatomic, strong) CARDAuthenticationItem *authResponse;
 
 @end
